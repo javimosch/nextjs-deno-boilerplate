@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  next-dev:
+    profiles: ["dev"]
+    image: node:20.17.0-alpine
+    ports:
+      - "3008:3000"
+    volumes:
+      - ./frontend:/app
+    working_dir: /app
+    env_file:
+      - ./.env
+    environment:
+      - NEXT_API_HOST=deno-dev
+      - NEXT_API_PORT=8000
+      - PORT=3000
+    command: npm run dev
+
+  deno-dev:
+    profiles: ["dev"]
+    image: denoland/deno:latest
+    ports:
+      - "3009:8000"
+    volumes:
+      - .:/app
+    working_dir: /app
+    env_file:
+      - ./.env
+    environment:
+      - PORT=8000
+    command: deno run --watch --allow-net --allow-env --allow-read --allow-write index.ts

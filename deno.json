@@ -1,0 +1,12 @@
+{
+  "imports": {
+    "oak": "https://deno.land/x/oak@v17.1.4/mod.ts",
+    "std/path": "https://deno.land/std@0.224.0/path/mod.ts",
+    "std/http": "https://deno.land/std@0.224.0/http/mod.ts",
+    "std/dotenv": "https://deno.land/std@0.224.0/dotenv/mod.ts"
+  },
+  "compilerOptions": {
+    "lib": ["deno.window", "deno.ns"]
+  },
+  "nodeModulesDir": "auto"
+}

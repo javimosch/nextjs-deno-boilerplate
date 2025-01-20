@@ -1,0 +1,11 @@
+node_modules
+.next
+frontend/node_modules
+frontend/out
+frontend/.next
+*.log
+dist
+build
+.DS_Store
+.env
+.env*
