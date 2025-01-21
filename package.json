@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "concurrently \"npm run dev:next\" \"npm run dev:deno\"",
-    "dev:next": "cd frontend && npm run dev",
+    "dev:next": "cd frontend && npm i && npm run dev",
     "dev:deno": "deno run --allow-net --allow-env --allow-read --allow-write index.ts",
     "start":"docker compose -f compose.prod.yml build && docker compose -f compose.prod.yml up",
-    "push":"docker compose -f compose.prod.yml build && docker compose -f compose.prod.push.yml push"
+    "push":"docker compose -f compose.prod.push.yml build && docker compose -f compose.prod.push.yml push"
   },
   "dependencies": {
     "concurrently": "^8.2.2"

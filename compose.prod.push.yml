@@ -12,10 +12,4 @@ services:
       - ./.env
     environment:
       - PORT=8000
-    networks:
-      - app-network
     command: deno run --allow-net --allow-env --allow-read --allow-write index.ts
-
-networks:
-  app-network:
-    driver: bridge

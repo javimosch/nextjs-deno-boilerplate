@@ -5,12 +5,8 @@ services:
     image: javimosch/deno-llm-api-deno:latest #Replace with your Docker Hub username/repository
     expose:
       - "8000"
+    env_file:
+      - ./.env
     environment:
       - PORT=8000
-    networks:
-      - app-network
     command: deno run --allow-net --allow-env --allow-read --allow-write index.ts
-
-networks:
-  app-network:
-    driver: bridge

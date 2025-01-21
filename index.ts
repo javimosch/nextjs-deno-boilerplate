@@ -79,7 +79,7 @@ router.all("/api/functions/:functionName", async (context) => {
 });
 
 // Serve static files for all other routes
-router.get("/(.*)", staticFiles);
+router.get("*", staticFiles);
 
 app.use(router.routes());
 app.use(router.allowedMethods());

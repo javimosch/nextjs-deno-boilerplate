@@ -31,7 +31,7 @@ export default function RootLayout({
         <nav className="bg-gray-800 p-4">
           <div className="container mx-auto flex gap-4">
             <Link href="/" className="text-white hover:text-gray-300">Home</Link>
-            <Link href="/groq-transcribe" className="text-white hover:text-gray-300">Transcription</Link>
+            <Link href="/groq-transcribe" className="text-white hover:text-gray-300">Voice to module</Link>
           </div>
         </nav>
         {children}
